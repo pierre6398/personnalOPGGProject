@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Historique des games</title>
+    <meta name="description" content="page principale: historique des games">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/ngStorage.min.js"></script>
+    <script src="js/module.js"></script>
+    <script src="js/colorController.js"></script>
+    <script src="js/mainLoLController.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-controller="colorController" ng-style="{'background-color': bgColor}">
+	<header>
+		<nav>
+			<ul>
+				<li id="home"><a href="#">Home page</a>
+				<li id="statistiques"><a href="statistiques.html">Statistiques</a>
+			</ul>
+		</nav>
+	</header>
+	
+    <h1>League of Legends</h1>
+
+    <h2>Historique des games</h2>   
+
+    <p style="position: absolute; top: 30px; right: 80px">
+       <label for="backgroundColor">background color: </label>
+        <input type="color"  id="backgroundColor" name = "backgroundColor" ng-model="bgColor" ng-change="changeColor(bgColor)"/>
+    </p>
+
+
+    <div ng-controller="mainLoLController">
+		<div class="search_container">
+			<div style="margin-right: 30px;">
+			    <input placeholder="find a champion" id="searchChamp" name="searchChamp" ng-model="searchChamp"/>
+			</div>
+			<div >
+			    <input placeholder="find a matchup" id="searchMatchup" name="searchMatchup" ng-model="searchMatchup"/>
+		    </div>
+		</div>
+	
+		<br>
+	
+	    <table class="custom-table">
+	        <tr>
+	        	<th>Id</th>
+	            <th>Issue</th>
+	            <th>Lane</th>
+	            <th>Champion</th>
+	            <th>Matchup</th>
+	        </tr>
+	        <tr ng-repeat="x in games | filter:rowContainsChampion | filter:rowContainsMatchup">
+	        	<td>{{x.id}}</td>
+	            <td>{{x.issue}}</td>
+	            <td>{{x.lane}}</td>
+	            <td>{{x.champion}}</td>
+	            <td>{{x.matchup}}</td>  
+	        </tr>
+	    </table>
+    </div>
+
+    <br>
+
+	<h3>à rajouter dans l'app: </h3>
+	-Changer la classe Champion en interface et faire les changements nécessaires pour winrateChampion etc
+    -mettre tout sur Git
+    <p>
+    </p>
+    
+    <footer>
+	    <a href="https://www.youtube.com/watch?v=bZ3SC6PvAC8" target="_blank">Tuto Youtube HTML+CSS</a> <br>
+	    <a href="https://www.op.gg/summoners/euw/0ptimisation-EUW" target="_blank">Lien du vrai OPGG</a>
+    </footer>
+
+</body>
+</html>

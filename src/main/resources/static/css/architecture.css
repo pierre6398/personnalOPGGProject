@@ -1,0 +1,37 @@
+/*
+personnalOPGGProject
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── example
+│   │   │           └── myapp
+│   │   │               ├── MySpringBootAppApplication.java
+│   │   │               ├── controller
+│   │   │               │   └── MyController.java
+│   │   │               ├── service
+│   │   │               │   └── MyService.java
+│   │   │               └── model
+│   │   │                   └── MyModel.java
+│   │   └── resources
+│   │       ├── static
+│   │       │   ├── index.html
+│   │       │   ├── page1.html
+│   │       │   ├── page2.html
+│   │       │   ├── css
+│   │       │   │   └── styles.css
+│   │       │   ├── js
+│   │       │   │   └── script.js
+│   │       │   └── images
+│   │       │       └── logo.png
+│   │       ├── templates
+│   │       │   └── some-template.html
+│   │       └── application.properties
+│   └── test
+│       └── java
+│           └── com
+│               └── example
+│                   └── myapp
+│                       └── MySpringBootAppApplicationTests.java
+└── pom.xml
+*/

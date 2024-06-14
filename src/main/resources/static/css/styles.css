@@ -1,0 +1,41 @@
+/* styles.css */
+table {
+    width: 100%;
+}
+
+.custom-table, .custom-table th, .custom-table td {
+    border: 1px solid black; /* Appliquer une bordure de 1px de couleur noire */
+    border-collapse: collapse; /* Pour éviter les doubles bordures entre les cellules */
+}
+
+.search_container {
+	display: flex;
+    align-items: center;
+}
+
+.container {
+	display: flex;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: 300px;
+}
+
+.image-container {
+    height: 100%;
+    margin-right: 30px;
+}
+
+.image-size {
+    width: auto;
+    height: 100%;
+}
+
+.chart-container {
+    width: 60%; /* Largeur de la div */
+   /*height: 100%; /* Hauteur de la div */
+    /*background-color: #f0f0f0; /* Couleur de fond */
+    /*border: 1px solid #ccc; /* Bordure */
+    /*padding: 0px; /* Espacement intérieur */
+    /*margin: 0px; /* Marge extérieure */
+}

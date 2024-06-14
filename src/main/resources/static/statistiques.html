@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app = "myApp" lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Statistiques</title>
+    <meta name="description" content="Statistiques par champion">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.2/dist/chartjs-plugin-annotation.min.js"></script>
+    <script src="js/ngStorage.min.js"></script>
+    <script src="js/module.js"></script>
+    <script src="js/colorController.js"></script>
+    <script src="js/mainLoLController.js"></script>
+    <script src="js/katarinaStatController.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-controller="colorController" ng-style="{'background-color': bgColor}">
+	<header>
+		<nav>
+			<ul>
+				<li id="home"><a href="index.html">Home page</a>
+			</ul>
+		</nav>
+	</header>
+
+    <h1>Page de statistiques</h1>
+    <p style="position: absolute; top: 30px; right: 80px">
+        <label for="backgroundColor">background color: </label>
+        <input type="color"  id="backgroundColor" name = "backgroundColor" ng-model="bgColor" ng-change="changeColor(bgColor)" />
+    </p>
+    
+    <div ng-controller="mainLoLController">
+    <p>
+    	Attention, pour l'instant only Katarina (nécessitera de trier par Champion plus tard)<br>
+    	Utiliser l'attribut "winrateChampion" de la classe Champion<br>
+    </p>
+    </div>
+    
+    <br>
+    
+    <h3>Winrate Katarina</h3>
+    
+    <div class="container">
+	    <div class="image-container">
+	        <img src="images/katarina.jpg" class="image-size" alt="katarina">
+	    </div>
+	    <div ng-controller="katarinaStatController" class="chart-container">
+	        <canvas id="myChart"></canvas>
+	    </div>
+	</div>
+
+    <p><a href="index.html">Back to main page</a></p>
+</body>
+</html>
