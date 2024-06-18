@@ -39,24 +39,23 @@
 			<div style="margin-right: 30px;">
 			    <input placeholder="find a champion" id="searchChamp" name="searchChamp" ng-model="searchChamp"/>
 			</div>
-			<div >
+			<div style="margin-right: 350px;">
 			    <input placeholder="find a matchup" id="searchMatchup" name="searchMatchup" ng-model="searchMatchup"/>
+		    </div>
+		    <div style="color: black">
+		    	<p style=" font-size: 20px;">{{totalWinrate}} winrate sur {{nbGames}} games</p>
 		    </div>
 		</div>
 	
-		<br>
-	
 	    <table class="custom-table">
 	        <tr>
-	        	<th>Id</th>
 	            <th>Issue</th>
 	            <th>Lane</th>
 	            <th>Champion</th>
 	            <th>Matchup</th>
 	        </tr>
 	        <tr ng-repeat="x in games | filter:rowContainsChampion | filter:rowContainsMatchup">
-	        	<td>{{x.id}}</td>
-	            <td>{{x.issue}}</td>
+	            <td ng-class="{'issue-victory': x.issue === 'Victoire', 'issue-defeat': x.issue === 'Défaite'}">{{x.issue}}</td>
 	            <td>{{x.lane}}</td>
 	            <td>{{x.champion}}</td>
 	            <td>{{x.matchup}}</td>  
@@ -67,8 +66,8 @@
     <br>
 
 	<h3>à rajouter dans l'app: </h3>
-	-Changer la classe Champion en interface et faire les changements nécessaires pour winrateChampion etc
-    -mettre tout sur Git
+	-regrouper les Get requests grâce à des ResponseEntity<br>
+    -ne mettre que les winrates des champions contre lesquels j'ai joué 3 games minimum ?<br>
     <p>
     </p>
     

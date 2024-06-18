@@ -2,29 +2,46 @@ app.controller("mainLoLController",function($scope,$http){
     $scope.searchChamp = "";
     $scope.searchMatchup = "";
     $scope.games = [
-      {id: "1", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Taliyah'},
-      {id: "2", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Aurelion Sol'},
-      {id: "3", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Corki'},
-      {id: "4", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Cho'Gath"},
-      {id: "5", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Yone"},
-      {id: "6", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Vladimir'},
-      {id: "7", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Zed'},
-      {id: "8", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Aurelion Sol'},
-      {id: "9", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Twisted Fate'},
-      {id: "10", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'LeBlanc'},
-      {id: "11", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Zed'},
-      {id: "12", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Garen'},
-      {id: "13", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Akali'},
-      {id: "14", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Akali'},
-      {id: "15", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Akali'},
-      {id: "16", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Xerath'},
-      {id: "17", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Jayce'},
-      {id: "18", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Aurelion Sol'},
-      {id: "19", issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Yasuo'},
-      {id: "20", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Ryze'},
-      {id: "21", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Cassiopeia'},
-      {id: "22", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Yone'},
-      {id: "23", issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Viktor'}
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Taliyah'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Aurelion Sol'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Corki'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Yone"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Vladimir'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Zed'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Aurelion Sol'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Twisted Fate'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'LeBlanc'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Zed'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Garen'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Akali'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Akali'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Akali'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Xerath'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Jayce'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Aurelion Sol'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Yasuo'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Ryze'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Cassiopeia'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Yone'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Viktor'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Aurelion Sol'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Malzahar'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Kassadin'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'LeBlanc'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Tristana'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Zed'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Yasuo'},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Malzahar'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: 'Vex'},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Syndra"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Brand"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Zed', matchup: "Yasuo"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Aurelion Sol"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Yone"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Zed', matchup: "Fizz"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Zed', matchup: "Tristana"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Garen"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Ahri"},
     ];
     $scope.rowContainsChampion = function(row) {
           if (!$scope.searchChamp) {
@@ -47,5 +64,18 @@ app.controller("mainLoLController",function($scope,$http){
 			});
 	};
 	
+	$scope.getTotalWinrate = function() {  
+	    $http.get('http://localhost:8080/winrate')
+	    	.then(function(response) {
+				console.log("Total winrate data fetched successfully");
+	            $scope.nbGames = response.data.nbGames;
+	            $scope.totalWinrate = response.data.totalWinrate;
+	        })
+	        .catch(function(error) {
+	            console.error('Erreur lors de la récupération des données:', error);
+	        });
+	 }
+	
 	$scope.sendData();
+	$scope.getTotalWinrate();
   });

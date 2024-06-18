@@ -1,20 +1,20 @@
-app.controller("katarinaStatController", function($scope, $http) {
-	$scope.getKataWinrate = function() {
-	    $http.get('http://localhost:8080/Katarina/winrate')
+app.controller("zedStatController", function($scope, $http) {
+	$scope.getZedWinrate = function() {
+	    $http.get('http://localhost:8080/Zed/winrate')
 	    	.then(function(response) {
-				console.log("Katarina winrate data fetched successfully");
+				console.log("Zed winrate data fetched successfully");
 	            $scope.value = response.data.toFixed(1);
-	            $scope.getKataWinrates();
+	            $scope.getZedWinrates();
 	        })
 	        .catch(function(error) {
 	            console.error('Erreur lors de la récupération des données:', error);
 	        });
     }
       
-   $scope.getKataWinrates = function() {  
-	    $http.get('http://localhost:8080/Katarina/winrates')
+   $scope.getZedWinrates = function() {  
+	    $http.get('http://localhost:8080/Zed/winrates')
 	    	.then(function(response) {
-				console.log("Katarina winrates data fetched successfully");
+				console.log("Zed winrates data fetched successfully");
 	            $scope.chartData = response.data;
 	            
 	            createBarChart($scope.chartData, $scope.value)
@@ -25,7 +25,7 @@ app.controller("katarinaStatController", function($scope, $http) {
 	 }
 
 	function createBarChart(data, value){
-		var ctx = document.getElementById('katarinaWinratesChart').getContext('2d');
+		var ctx = document.getElementById('zedWinratesChart').getContext('2d');
         var chart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -65,5 +65,5 @@ app.controller("katarinaStatController", function($scope, $http) {
             }
         });
     }
-    $scope.getKataWinrate();
+    $scope.getZedWinrate();
 });

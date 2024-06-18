@@ -15,7 +15,9 @@ public class Manager {
 		this.games = games;
 		this.winrateChampions = new ArrayList<WinrateChampion>();
 		WinrateChampion winrateKatarina = new WinrateChampion("Katarina");
+		WinrateChampion winrateZed = new WinrateChampion("Zed");
 		winrateChampions.add(winrateKatarina);
+		winrateChampions.add(winrateZed);
 	}
 	
 	public Manager() {
@@ -33,7 +35,8 @@ public class Manager {
     }
 	
 	public void updateWinrateChampions(Game newGame) {
-		WinrateChampion winrateChampion = winrateChampions.get(0);
+		String championName = newGame.getChampion().getName();
+		WinrateChampion winrateChampion = getWinrateChampionByName(championName);
 		String issue = newGame.getIssue();
         Matchup matchup = newGame.getMatchup();
         boolean newChamp = true;
@@ -80,5 +83,28 @@ public class Manager {
 
 	public void setGames(List<Game> games) {
 		this.games = games;
+	}
+	
+	public WinrateChampion getWinrateChampionByName(String name) {
+		for (WinrateChampion winrateChampion : winrateChampions) {
+			if(winrateChampion.getNameChampion().equals(name)) {
+				return winrateChampion;
+			}
+		}
+		return null;
+	}
+	
+	public int getNbGames() {
+		return games.size();
+	}
+	
+	public double getTotalWinrate() {
+		int S = 0;
+		for (Game game : games) {
+			if (game.getIssue().equals("Victoire")) {
+				S++;
+			}
+		}
+		return S*100.0/getNbGames();
 	}
 }

@@ -14,6 +14,7 @@
     <script src="js/colorController.js"></script>
     <script src="js/mainLoLController.js"></script>
     <script src="js/katarinaStatController.js"></script>
+    <script src="js/zedStatController.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -33,13 +34,7 @@
     </p>
     
     <div ng-controller="mainLoLController">
-    <p>
-    	Attention, pour l'instant only Katarina (nécessitera de trier par Champion plus tard)<br>
-    	Utiliser l'attribut "winrateChampion" de la classe Champion<br>
-    </p>
     </div>
-    
-    <br>
     
     <h3>Winrate Katarina</h3>
     
@@ -48,7 +43,20 @@
 	        <img src="images/katarina.jpg" class="image-size" alt="katarina">
 	    </div>
 	    <div ng-controller="katarinaStatController" class="chart-container">
-	        <canvas id="myChart"></canvas>
+	        <canvas id="katarinaWinratesChart"></canvas>
+	    </div>
+	</div>
+	
+	<br>
+    
+    <h3>Winrate Zed</h3>
+    
+    <div class="container">
+	    <div class="image-container">
+	        <img src="images/zed.jpg" class="image-size" alt="zed">
+	    </div>
+	    <div ng-controller="zedStatController" class="chart-container">
+	        <canvas id="zedWinratesChart"></canvas>
 	    </div>
 	</div>
 

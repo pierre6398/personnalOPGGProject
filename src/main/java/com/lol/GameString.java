@@ -1,5 +1,7 @@
 package com.lol;
 
+import com.request.GameStringRequest;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -25,6 +27,15 @@ public class GameString {
 		this.championName = champion;
 		this.matchupName = matchup;
 	}
+	
+	public GameString(Long id, GameStringRequest gameStringRequest) {
+		this.id = id;
+		this.issue = gameStringRequest.getIssue();
+		this.lane = gameStringRequest.getLane();
+		this.championName = gameStringRequest.getChampion();
+		this.matchupName = gameStringRequest.getMatchup();
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -43,16 +54,16 @@ public class GameString {
 	public void setLane(String lane) {
 		this.lane = lane;
 	}
-	public String getChampion() {
+	public String getChampionName() {
 		return championName;
 	}
-	public void setChampion(String champion) {
+	public void setChampionName(String champion) {
 		this.championName = champion;
 	}
-	public String getMatchup() {
+	public String getMatchupName() {
 		return matchupName;
 	}
-	public void setMatchup(String matchup) {
+	public void setMatchupName(String matchup) {
 		this.matchupName = matchup;
 	}
     
@@ -60,5 +71,9 @@ public class GameString {
     	Pick champion = new Pick(championName);
     	Matchup matchup = new Matchup(matchupName);
     	return new Game(id, issue, lane, champion, matchup);
+    }
+    
+    public void printGameString() {
+    	 System.out.println("id: " + id + ", issue: " + issue + ", lane: " + lane + ", champion: " + championName + ", match up: " + matchupName);
     }
 }
