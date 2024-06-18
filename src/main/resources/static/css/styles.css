@@ -1,4 +1,32 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&display=swap');
+
+body{
+	font-family: 'Advent Pro', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+li{
+	list-style-type: none;
+}
+
+h1{
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 30px;
+	font-size: 2em;
+}
+
+a{
+	text-decoration: none;
+}
+
 table {
     width: 100%;
 }
