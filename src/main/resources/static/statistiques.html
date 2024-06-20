@@ -9,16 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.2/dist/chartjs-plugin-annotation.min.js"></script>
-    <script src="js/ngStorage.min.js"></script>
     <script src="js/module.js"></script>
-    <script src="js/colorController.js"></script>
     <script src="js/mainLoLController.js"></script>
     <script src="js/katarinaStatController.js"></script>
     <script src="js/zedStatController.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body ng-controller="colorController" ng-style="{'background-color': bgColor}">
+<body>
 	<header>
 		<nav>
 			<ul>
@@ -26,38 +24,33 @@
 			</ul>
 		</nav>
 	</header>
-
-    <h1>Page de statistiques</h1>
-    <p style="position: absolute; top: 30px; right: 80px">
-        <label for="backgroundColor">background color: </label>
-        <input type="color"  id="backgroundColor" name = "backgroundColor" ng-model="bgColor" ng-change="changeColor(bgColor)" />
-    </p>
     
-    <div ng-controller="mainLoLController">
+    <div id="titre_stats" ng-controller="mainLoLController">
+    	<h1>Page de statistiques</h1>
     </div>
     
-    <h3>Winrate Katarina</h3>
-    
-    <div class="container">
-	    <div class="image-container">
-	        <img src="images/katarina.jpg" class="image-size" alt="katarina">
-	    </div>
-	    <div ng-controller="katarinaStatController" class="chart-container">
-	        <canvas id="katarinaWinratesChart"></canvas>
-	    </div>
-	</div>
-	
-	<br>
-    
-    <h3>Winrate Zed</h3>
-    
-    <div class="container">
-	    <div class="image-container">
-	        <img src="images/zed.jpg" class="image-size" alt="zed">
-	    </div>
-	    <div ng-controller="zedStatController" class="chart-container">
-	        <canvas id="zedWinratesChart"></canvas>
-	    </div>
+    <div id="winrate_charts">
+    	<h3>Winrate Katarina</h3>
+	    <div class="container">
+		    <div class="image-container">
+		        <img src="images/katarina.jpg" class="image-size" alt="katarina">
+		    </div>
+		    <div ng-controller="katarinaStatController" class="chart-container">
+		        <canvas id="katarinaWinratesChart"></canvas>
+		    </div>
+		</div>
+		
+		<br>
+	    
+	    <h3>Winrate Zed</h3>
+	    <div class="container">
+		    <div class="image-container">
+		        <img src="images/zed.jpg" class="image-size" alt="zed">
+		    </div>
+		    <div ng-controller="zedStatController" class="chart-container">
+		        <canvas id="zedWinratesChart"></canvas>
+		    </div>
+		</div>
 	</div>
 
     <p><a href="index.html">Back to main page</a></p>

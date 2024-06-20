@@ -7,34 +7,30 @@
     <meta name="description" content="page principale: historique des games">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="js/ngStorage.min.js"></script>
     <script src="js/module.js"></script>
-    <script src="js/colorController.js"></script>
     <script src="js/mainLoLController.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body ng-controller="colorController" ng-style="{'background-color': bgColor}">
+<body>
 	<header>
 		<nav>
 			<ul>
 				<li id="home"><a href="#">Home page</a>
+				<li id="opgg"><a href="https://www.op.gg/summoners/euw/0ptimisation-EUW" target="_blank">OPGG</a>
 				<li id="statistiques"><a href="statistiques.html">Statistiques</a>
 			</ul>
 		</nav>
 	</header>
 	
-    <h1>League of Legends</h1>
-
-    <h2>Historique des games</h2>   
-
-    <p style="position: absolute; top: 30px; right: 80px">
-       <label for="backgroundColor">background color: </label>
-        <input type="color"  id="backgroundColor" name = "backgroundColor" ng-model="bgColor" ng-change="changeColor(bgColor)"/>
-    </p>
-
-
-    <div ng-controller="mainLoLController">
+	<div id="image_principale">
+		<h1 id=titre_index>League of Legends</h1>
+		<div id="trait"></div>
+		<h3>0ptimisation</h3>
+	</div>
+	
+	<div id= "historique" ng-controller="mainLoLController">
+    	<h2>Historique des games</h2>
 		<div class="search_container">
 			<div style="margin-right: 30px;">
 			    <input placeholder="find a champion" id="searchChamp" name="searchChamp" ng-model="searchChamp"/>
@@ -65,15 +61,16 @@
 
     <br>
 
-	<h3>à rajouter dans l'app: </h3>
+	<h2>à rajouter dans l'app: </h2>
+	 <p>
+	-problème d'affichage des stats au premier chargement de la page<br>
+	-problème d'adaptation du format de la page<br>
 	-regrouper les Get requests grâce à des ResponseEntity<br>
     -ne mettre que les winrates des champions contre lesquels j'ai joué 3 games minimum ?<br>
-    <p>
     </p>
     
     <footer>
 	    <a href="https://www.youtube.com/watch?v=bZ3SC6PvAC8" target="_blank">Tuto Youtube HTML+CSS</a> <br>
-	    <a href="https://www.op.gg/summoners/euw/0ptimisation-EUW" target="_blank">Lien du vrai OPGG</a>
     </footer>
 
 </body>

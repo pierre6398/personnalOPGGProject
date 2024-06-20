@@ -17,14 +17,85 @@ li{
 }
 
 h1{
-	text-transform: uppercase;
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 60px;
+	font-size: 5em;
+}
+
+h2{
+	text-transform: uppercase;
+	padding-top: 60px;
 	font-size: 2em;
 }
 
 a{
 	text-decoration: none;
+	color: black;
+}
+
+
+/* ***********************NAVBAR*********************** */
+nav {
+	overflow: hidden;
+	background-color: #FFFAE1;
+	position: fixed;
+	width: 100%;
+	opacity: 0.9;
+}
+
+header li {
+	float: right;
+	font-size: 1.2em;
+}
+
+header li a {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	padding: 18px 16px;
+}
+
+#home {
+	font-family: 'Dancing Script', 'cursive';
+	font-weight: bold;
+	float: left;
+}
+
+
+/* *********************** IMAGE PRINCIPALE *********************** */
+#image_principale {
+	padding-top: 60px;
+	background: url(media/image-principale.jpg) no-repeat fixed 50% 50%;
+	background-size: cover;
+	height: 599px;
+}
+
+#titre_index {
+	font-family: 'Dancing Script', cursive;
+	color: antiqueWhite;
+	margin-top: 40px;
+	text-shadow: 1px 3px 2px black;
+}
+
+#trait {
+	height: 1px;
+	width: 25%;
+	margin: -3px auto;
+	background-color: #FFFAE1;
+	box-shadow: 1px 3px 2px black;
+}
+
+h3 {
+	text-align: center;
+	color: antiqueWhite;
+	font-size: 3em;
+	text-shadow: 1px 3px 2px black;
+}
+
+/* *********************** DIV *********************** */
+
+#titre_stats, #winrate_charts {
+	padding-top: 10px;
 }
 
 table {

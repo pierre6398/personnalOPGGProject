@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 public class PersonnalOpggProjectApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("log4j2.formatMsgNoLookups", "true");
+		
 		SpringApplication.run(PersonnalOpggProjectApplication.class, args);
 	}
 }
