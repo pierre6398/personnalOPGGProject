@@ -2,6 +2,7 @@ package com.restControllers;
 
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +37,7 @@ public class WinratesRestController {
     public Map<String, Double> getKatarinaWinrates() {
 		WinrateChampion winrateKatarina = getWinrateChampion("Katarina");
         Map<String, Double> katarinaWinrates = displayService.printWinrateAgainst(winrateKatarina.getWinrateAgainst());
-        return katarinaWinrates;
+        return new TreeMap<>(katarinaWinrates);
 	}
 	
 	@GetMapping("/Zed/winrate")
@@ -50,7 +51,7 @@ public class WinratesRestController {
     public Map<String, Double> getZedWinrates() {
 		WinrateChampion winrateZed = getWinrateChampion("Zed");
         Map<String, Double> zedWinrates = displayService.printWinrateAgainst(winrateZed.getWinrateAgainst());
-        return zedWinrates;
+        return new TreeMap<>(zedWinrates);
 	}
 	
 	public WinrateChampion getWinrateChampion(String championName) {
