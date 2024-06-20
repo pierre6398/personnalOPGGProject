@@ -21,12 +21,15 @@
 		<nav>
 			<ul>
 				<li id="home"><a href="index.html">Home page</a>
+				<li id="opgg"><a href="https://www.op.gg/summoners/euw/0ptimisation-EUW" target="_blank">OPGG</a>
+				<li id="statistiques"><a href="#">Statistiques</a>
 			</ul>
 		</nav>
 	</header>
     
-    <div id="titre_stats" ng-controller="mainLoLController">
+    <div id="title_area" ng-controller="mainLoLController">
     	<h1 id="titre_stats">Statistiques</h1>
+    	<h2>Winrates</h2>
     </div>
     
     <div id="winrate_charts">
@@ -52,7 +55,10 @@
 		    </div>
 		</div>
 	</div>
-
-    <p><a href="index.html">Back to main page</a></p>
+	
+	<footer>
+		<button id="up" onclick="window.location.href = '#';">up</button>
+	</footer>
+	
 </body>
 </html>

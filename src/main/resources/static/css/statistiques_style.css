@@ -25,7 +25,8 @@ h1 {
 h2 {
 	text-transform: uppercase;
 	padding-top: 10px;
-	font-size: 2em;
+	text-align: center;
+	font-size: 3em;
 }
 
 a {
@@ -63,22 +64,21 @@ header li a {
 
 
 /* ***********************TITRE*********************** */
-#titre_stats {
-	padding-top: 60px;
+#title_area {
+	padding-top: 10px;
 }
 
 #titre_stats {
 	font-family: 'Dancing Script', cursive;
-	color: black;
-	margin-top: 40px;
+	color: antiqueWhite;
+	margin-top: 20px;
 	text-shadow: 1px 3px 2px black;
 }
 
 
-
-.search_container {
-	display: flex;
-    align-items: center;
+/* ***********************WINRATE CHARTS*********************** */
+#winrate_charts {
+	padding-top: 0px;
 }
 
 .container {
@@ -89,9 +89,26 @@ header li a {
     height: 300px;
 }
 
+h3 {
+	color: antiqueWhite;
+	font-size: 2em;
+	text-shadow: 1px 3px 2px black;
+}
+
 .image-container {
     height: 100%;
     margin-right: 30px;
+    align-items: center;
+}
+.image-container img {
+	border-radius: 10%;
+	box-shadow: 3px 4px 5px 4px rgba(0,0,0,0.7);
+}
+
+.image-container img:hover {
+	opacity: 0.5;
+	transform: scale(1.05);
+	transition: 0.5s ease-in-out;
 }
 
 .image-size {
@@ -100,10 +117,16 @@ header li a {
 }
 
 .chart-container {
-    width: 60%; /* Largeur de la div */
+   width: 60%; /* Largeur de la div */
    /*height: 100%; /* Hauteur de la div */
     /*background-color: #f0f0f0; /* Couleur de fond */
     /*border: 1px solid #ccc; /* Bordure */
     /*padding: 0px; /* Espacement intérieur */
     /*margin: 0px; /* Marge extérieure */
+}
+
+/* ***********************FOOTER*********************** */
+#up {
+	margin-top: 50px;
+	float: right;
 }
