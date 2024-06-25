@@ -54,6 +54,38 @@ public class WinratesRestController {
         return new TreeMap<>(zedWinrates);
 	}
 	
+	@GetMapping("/VelKoz/winrate")
+    public ResponseEntity<Double> getVelKozTotalWinrate() {
+		WinrateChampion winrateVelKoz = getWinrateChampion("Vel'Koz");
+        double totalWinrateVel = winrateVelKoz.winrateTotal();
+        //HttpHeaders headers = new HttpHeaders();
+        //headers.setContentType(MediaType.TEXT_PLAIN);
+        return ResponseEntity.ok(totalWinrateVel);
+    }
+	
+	@GetMapping("/VelKoz/winrates")
+    public Map<String, Double> getVelKozWinrates() {
+		WinrateChampion winrateVelKoz = getWinrateChampion("Vel'Koz");
+        Map<String, Double> velkozWinrates = displayService.printWinrateAgainst(winrateVelKoz.getWinrateAgainst());
+        return new TreeMap<>(velkozWinrates);
+	}
+	
+	@GetMapping("/Ezreal/winrate")
+    public ResponseEntity<Double> getEzrealTotalWinrate() {
+		WinrateChampion winrateEzreal = getWinrateChampion("Ezreal");
+        double totalWinrateEz = winrateEzreal.winrateTotal();
+        //HttpHeaders headers = new HttpHeaders();
+        //headers.setContentType(MediaType.TEXT_PLAIN);
+        return ResponseEntity.ok(totalWinrateEz);
+    }
+	
+	@GetMapping("/Ezreal/winrates")
+    public Map<String, Double> getEzrealWinrates() {
+		WinrateChampion winrateEzreal = getWinrateChampion("Ezreal");
+        Map<String, Double> ezrealWinrates = displayService.printWinrateAgainst(winrateEzreal.getWinrateAgainst());
+        return new TreeMap<>(ezrealWinrates);
+	}
+	
 	public WinrateChampion getWinrateChampion(String championName) {
 		List<Game> games = gameStringService.getGames();
         Manager manager = new Manager(games);

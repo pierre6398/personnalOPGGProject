@@ -19,12 +19,14 @@ li {
 h1 {
 	text-align: center;
 	padding-top: 60px;
+	margin: 40px;
 	font-size: 5em;
 }
 
 h2 {
 	text-transform: uppercase;
 	padding-top: 10px;
+	margin: 0;
 	text-align: center;
 	font-size: 3em;
 }
@@ -65,20 +67,22 @@ header li a {
 
 /* ***********************TITRE*********************** */
 #title_area {
-	padding-top: 10px;
+	padding: 1px 0px;
+	background-color: #f1f2f6;
 }
 
 #titre_stats {
 	font-family: 'Dancing Script', cursive;
 	color: antiqueWhite;
-	margin-top: 20px;
+	margin-top: 10px;
 	text-shadow: 1px 3px 2px black;
 }
 
 
 /* ***********************WINRATE CHARTS*********************** */
 #winrate_charts {
-	padding-top: 0px;
+	padding: 1px 0px;
+	background-color: #f1f2f6;
 }
 
 .container {
@@ -92,6 +96,7 @@ header li a {
 h3 {
 	color: antiqueWhite;
 	font-size: 2em;
+	margin-top: 10px;
 	text-shadow: 1px 3px 2px black;
 }
 
@@ -126,7 +131,16 @@ h3 {
 }
 
 /* ***********************FOOTER*********************** */
+footer {
+	background-color: #f1f2f6;
+}
+
+#footer {
+	height: 50px;
+}
+
 #up {
-	margin-top: 50px;
+	margin-top: 30px;
+	margin-right: 30px;
 	float: right;
 }

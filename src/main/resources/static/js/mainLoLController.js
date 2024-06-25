@@ -46,7 +46,23 @@ app.controller("mainLoLController",function($scope,$http){
       {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Twisted Fate"},
       {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Vex"},
       {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Annie"},
-      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Anivia"}
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Anivia"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Vex"},
+      {issue: 'Victoire', lane: 'Adc', champion: 'Ezreal', matchup: "Miss Fortune"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Vel'Koz"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Vladimir"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Ahri"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Yone"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Viktor"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "LeBlanc"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Viktor"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Hwei"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Viktor"},
+      {issue: 'Défaite', lane: 'Mid', champion: "Vel'Koz", matchup: "Xerath"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Fizz"},
+      {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Ahri"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Corki"},
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Yasuo"}
     ];
     $scope.rowContainsChampion = function(row) {
           if (!$scope.searchChamp) {

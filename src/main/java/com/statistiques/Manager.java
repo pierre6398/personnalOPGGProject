@@ -16,8 +16,12 @@ public class Manager {
 		this.winrateChampions = new ArrayList<WinrateChampion>();
 		WinrateChampion winrateKatarina = new WinrateChampion("Katarina");
 		WinrateChampion winrateZed = new WinrateChampion("Zed");
+		WinrateChampion winrateVelKoz = new WinrateChampion("Vel'Koz");
+		WinrateChampion winrateEzreal= new WinrateChampion("Ezreal");
 		winrateChampions.add(winrateKatarina);
 		winrateChampions.add(winrateZed);
+		winrateChampions.add(winrateVelKoz);
+		winrateChampions.add(winrateEzreal);
 	}
 	
 	public Manager() {

@@ -13,6 +13,8 @@
     <script src="js/mainLoLController.js"></script>
     <script src="js/katarinaStatController.js"></script>
     <script src="js/zedStatController.js"></script>
+    <script src="js/velkozStatController.js"></script>
+    <script src="js/ezrealStatController.js"></script>
     <link rel="stylesheet" href="css/statistiques_style.css">
 </head>
 
@@ -54,11 +56,39 @@
 		        <canvas id="zedWinratesChart"></canvas>
 		    </div>
 		</div>
+		
+		<br>
+	    
+	    <h3>Winrate Vel'Koz</h3>
+	    <div class="container">
+		    <div class="image-container">
+		        <img src="images/velkoz.jpg" class="image-size" alt="velkoz">
+		    </div>
+		    <div ng-controller="velkozStatController" class="chart-container">
+		        <canvas id="velkozWinratesChart"></canvas>
+		    </div>
+		</div>
+		
+		<br>
+		
+		<h3>Winrate Ezreal</h3>
+	    <div class="container">
+		    <div class="image-container">
+		        <img src="images/ezreal.jpg" class="image-size" alt="ezreal">
+		    </div>
+		    <div ng-controller="ezrealStatController" class="chart-container">
+		        <canvas id="ezrealWinratesChart"></canvas>
+		    </div>
+		</div>
 	</div>
 	
 	<footer>
-		<button id="up" onclick="window.location.href = '#';">up</button>
+		<div id="footer">
+			<button id="up" onclick="window.location.href = '#';">up</button>
+		</div>
 	</footer>
+	
+	
 	
 </body>
 </html>
