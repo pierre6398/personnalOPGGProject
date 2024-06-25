@@ -32,14 +32,14 @@
 	<div id= "historique" ng-controller="mainLoLController">
     	<h2>Historique des games</h2>
 		<div class="search_container">
+			<div id="">
+		    	<p style=" font-size: 18px;">{{totalWinrate}} winrate sur {{nbGames}} games</p>
+		    </div>
 			<div>
 			    <input placeholder="find a champion" id="searchChamp" name="searchChamp" ng-model="searchChamp"/>
 			</div>
 			<div>
 			    <input placeholder="find a matchup" id="searchMatchup" name="searchMatchup" ng-model="searchMatchup"/>
-		    </div>
-		    <div id="">
-		    	<p style=" font-size: 18px;">{{totalWinrate}} winrate sur {{nbGames}} games</p>
 		    </div>
 		</div>
 	
@@ -59,19 +59,20 @@
 	    </table>
     </div>
 
-    <br>
 
+	<footer>
 	<h2>à rajouter dans l'app: </h2>
 	 <p>
-	-problème d'affichage des stats au premier chargement de la page<br>
 	-problème d'adaptation du format de la page<br>
 	-rajouter le nombre de games par champion<br>
+	-héberger le site !<br>
 	-regrouper les Get requests grâce à des ResponseEntity<br>
     -ne mettre que les winrates des champions contre lesquels j'ai joué 3 games minimum ?<br>
     </p>
     
-    <footer>
+    <!-- 
 	    <a href="https://www.youtube.com/watch?v=bZ3SC6PvAC8" target="_blank">Tuto Youtube HTML+CSS</a> <br>
+	    -->
     </footer>
 
 </body>

@@ -62,7 +62,8 @@ app.controller("mainLoLController",function($scope,$http){
       {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Fizz"},
       {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Ahri"},
       {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Corki"},
-      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Yasuo"}
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Yasuo"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Anivia'}
     ];
     $scope.rowContainsChampion = function(row) {
           if (!$scope.searchChamp) {
@@ -76,10 +77,11 @@ app.controller("mainLoLController",function($scope,$http){
           }
           return ('' + row.matchup).indexOf($scope.searchMatchup) !== -1;
       };
-    $scope.sendData = function() {
+    $scope.sendData = function() {	
 		$http.post("http://localhost:8080/main_data", $scope.games)
 			.then(function(response) {
 				console.log("Data sent successfully");
+				$scope.getTotalWinrate();
 			}, function(error) {
 				console.error("Error sending data", error);
 			});
@@ -98,5 +100,4 @@ app.controller("mainLoLController",function($scope,$http){
 	 }
 	
 	$scope.sendData();
-	$scope.getTotalWinrate();
   });

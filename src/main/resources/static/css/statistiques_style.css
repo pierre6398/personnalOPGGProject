@@ -1,6 +1,10 @@
 /*statistiques_style.css */
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&display=swap');
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Advent Pro', sans-serif;
 	padding: 0;
@@ -114,6 +118,7 @@ h3 {
 	opacity: 0.5;
 	transform: scale(1.05);
 	transition: 0.5s ease-in-out;
+	cursor: pointer;
 }
 
 .image-size {

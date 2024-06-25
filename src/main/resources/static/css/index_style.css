@@ -1,6 +1,10 @@
 /* index_style.css */
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&display=swap');
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Advent Pro', sans-serif;
 	padding: 0;
@@ -26,6 +30,7 @@ h2 {
 	text-transform: uppercase;
 	padding-top: 10px;
 	font-size: 2em;
+	margin: 0;
 }
 
 a {
@@ -103,8 +108,14 @@ h3 {
 	display: flex;
 	flex-wrap: wrap;
     align-items: center;
+    margin-right: 50px;
     justify-content: space-between;
     padding: 0px 5%;
+}
+
+input {
+	font-size: 1em;
+	font-family: 'Advent Pro', sans-serif;
 }
 
 table {
@@ -121,4 +132,12 @@ table {
 }
 .issue-defeat {
     color: red;
+}
+
+/* *********************** FOOTER *********************** */
+footer {
+	background-color: #524A3A;
+	color: #FFFAE1;
+	margin: 0;
+	padding: 1px;
 }
