@@ -63,7 +63,17 @@ app.controller("mainLoLController",function($scope,$http){
       {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Ahri"},
       {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: "Corki"},
       {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Yasuo"},
-      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Anivia'}
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Anivia'},
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Tristana"},
+      {issue: 'Victoire', lane: 'Mid', champion: 'Katarina', matchup: 'Aurelion Sol'},
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Zed"},
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Ekko"},
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Riven"},
+      {issue: 'Défaite', lane: 'Mid', champion: "Vel'Koz", matchup: "Naafiri"},
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Tristana"},
+      {issue: 'Défaite', lane: 'Mid', champion: "Katarina", matchup: "LeBlanc"},
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Malphite"},
+      {issue: 'Victoire', lane: 'Mid', champion: "Katarina", matchup: "Akali"}
     ];
     $scope.rowContainsChampion = function(row) {
           if (!$scope.searchChamp) {
