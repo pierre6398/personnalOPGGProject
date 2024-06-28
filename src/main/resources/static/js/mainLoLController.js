@@ -78,7 +78,8 @@ app.controller("mainLoLController",function($scope,$http){
       {issue: 'Défaite', lane: 'Mid', champion: "Katarina", matchup: "Lissandra"},
       {issue: 'Défaite', lane: 'Mid', champion: "Katarina", matchup: "Talon"},
       {issue: 'Victoire', lane: 'Mid', champion: "Katarina", matchup: "Annie"},
-      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Akshan"}
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Akshan"},
+      {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Quinn"}
     ];
     $scope.rowContainsChampion = function(row) {
           if (!$scope.searchChamp) {
