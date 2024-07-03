@@ -92,7 +92,12 @@ app.controller("mainLoLController",function($scope,$http){
       {issue: 'Défaite', lane: 'Mid', champion: 'Katarina', matchup: "Vex"},
       {issue: 'Victoire', lane: 'Mid', champion: "Katarina", matchup: "Quiyana"},
       {issue: 'Victoire', lane: 'Mid', champion: "Vel'Koz", matchup: "Caitlyn"},
-      {issue: 'Victoire', lane: 'Mid', champion: "Katarina", matchup: "Vladimir"}
+      {issue: 'Victoire', lane: 'Mid', champion: "Katarina", matchup: "Vladimir"},
+      {issue: 'Défaite', lane: 'Mid', champion: "Vel'Koz", matchup: "Katarina"},
+      {issue: 'Défaite', lane: 'Adc', champion: 'Ezreal', matchup: "Kog'Maw"},
+      {issue: 'Défaite', lane: 'Mid', champion: "Katarina", matchup: "Twisted Fate"},
+      {issue: 'Défaite', lane: 'Mid', champion: "Vel'Koz", matchup: "Katarina"},
+      {issue: 'Défaite', lane: 'Mid', champion: "Katarina", matchup: "Kassadin"}
     ];
     $scope.rowContainsChampion = function(row) {
           if (!$scope.searchChamp) {
